@@ -48,6 +48,12 @@ def check_winner():
 		return 'X'
 	elif game[2][0] == 'X' and game[1][1] == 'X' and game[0][2] == 'X':
 		return 'X'
+	elif game[0][0] == 'X' and game[1][0] == 'X' and game[2][0] == 'X':
+		return 'X'
+	elif game[0][1] == 'X' and game[1][1] == 'X' and game[2][1] == 'X':
+		return 'X'
+	elif game[0][2] == 'X' and game[1][2] == 'X' and game[2][2] == 'X':
+		return 'X'
 	elif game[0][0] == 'O' and game[0][1] == 'O' and game[0][2] == 'O':
 		return 'O'
 	elif game[1][0] == 'O' and game[1][1] == 'O' and game[1][2] == 'O':
@@ -57,6 +63,12 @@ def check_winner():
 	elif game[0][0] == 'O' and game[1][1] == 'O' and game[2][2] == 'O':
 		return 'O'
 	elif game[2][0] == 'O' and game[1][1] == 'O' and game[0][2] == 'O':
+		return 'O'
+	elif game[0][0] == 'O' and game[1][0] == 'O' and game[2][0] == 'O':
+		return 'O'
+	elif game[0][1] == 'O' and game[1][1] == 'O' and game[2][1] == 'O':
+		return 'O'
+	elif game[0][2] == 'O' and game[1][2] == 'O' and game[2][2] == 'O':
 		return 'O'
 	else:
 		pass
@@ -69,20 +81,21 @@ while True:
 	while True:
 		show()
 		play1()
+		show()
 		if check_winner() == 'X' :
-			print('\n\n\t Player 1 (X) is the Winner')
+			print('\n\n\t Player 1 (X) is the Winner\n')
 			break
 		elif check_winner() == 'O' :
-			print('\n\n\t Player 2 (O) is the Winner')
+			print('\n\n\t Player 2 (O) is the Winner\n')
 			break
-		show()
 		play2()
 		if check_winner() == 'X' :
-			print('\n\n\t Player 1 (X) is the Winner')
+			print('\n\n\t Player 1 (X) is the Winner\n')
 			break
 		if check_winner() == 'O' :
-			print('\n\n\t Player 2 (O) is the Winner')
+			print('\n\n\t Player 2 (O) is the Winner\n')
 			break
+		show()
 	break
 
 
